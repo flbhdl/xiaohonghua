@@ -1,0 +1,152 @@
+*{margin: 0;padding: 0;}
+body{
+    background-color: #21324c;
+    /* color:#fff; */
+    /* font-family: 'Indie Flower',cursive; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;/*vh（视窗单位，视窗高度。设置body的高度即为屏幕可见高度，即使会被元素撑开也与屏幕高度一致*/
+}
+.flower{
+    position: relative;
+    top:-80px;
+    left:-20px;
+}
+.flower:nth-child(2){
+    left:-80px;
+    top:-19px;
+  transform: scale(.7);
+}
+.flower:nth-child(3){
+    left:55px;
+    top:-19px;
+    transform: scale(.7);
+}
+/* 花瓣 */
+.flower .petal{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #d52d58;
+    border-radius: 0px 30px 0px 30px;
+    width: 30px;
+    height: 60px;
+}
+.flower .petal:nth-child(1){
+    left:-10px;
+    transform: rotate(-10deg);
+    transform-origin: bottom right;
+    background-color: #b81b43;
+    z-index:5;
+    animation: openleft 2s ease-in 2s infinite;
+}
+.flower .petal:nth-child(2){
+    left:-10px;
+    background-color: #c9284b;
+    z-index:4;
+    animation: openleft 2s ease-in-out 1s infinite;
+}
+.flower .petal:nth-child(3){
+   border-radius: 30px;
+   left:5px;
+}
+.flower .petal:nth-child(4){
+    border-radius: 30px 0 30px 0;
+    background-color: #c9284b;
+    left:20px;
+    z-index:4;
+    animation: openright 2s ease-in-out 1s infinite;
+}
+.flower .petal:nth-child(5){
+    border-radius: 30px 0 30px 0;
+    left:20px;
+    transform: rotate(10deg);
+    transform-origin: bottom left;
+    background-color:#b81b43;
+    z-index:5;
+    animation: openright 2s ease-in 2s infinite;
+    /* ease-in:慢速开始；ease-in-out：慢速开始和结束  */
+}
+/* 花杆 */
+.flower .rod{
+    background-color: #329932;
+    width: 5px;
+    height: 158px;
+    position: absolute;
+    left:17.5px;
+    top:58px;
+    z-index: -1;
+}
+/* 花托 */
+.flower .rod::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 8px;
+    background-color: lightgreen;
+    border-radius: 3px;
+    margin-left: -8px;
+}
+/* 花刺 */
+.flower .rod .spike{
+    /* width: 0;
+    height: 0; */
+    position: absolute;
+    top:20px;
+    left:-10px;
+    border-width:5px;
+    border-style: solid;
+    border-color:transparent #329932 transparent transparent;
+}
+.flower .rod .spike:nth-child(2){
+    top:50px;
+    left: 4px;
+    border-color: transparent transparent transparent #329932;
+}
+.flower .rod .spike:nth-child(3){
+    top:80px;
+}
+.flower .rod .spike:nth-child(4){
+    top:110px;
+    left:4px;
+    border-color: transparent transparent transparent #329932;
+}
+/* 定义动画 */
+@keyframes openleft {
+    20%,80%{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes openright {
+    20%,80%{
+        transform: rotate(20deg);
+    }
+}
+/* 结语 */
+.poem{
+    position: fixed;
+    top:60%;
+    right:0;
+    color:#ccc;
+    font-size: 12px;
+}
+.poem>h3{
+    text-align: center;
+    color:#c9284b;
+}
+.poem>h4{
+    background: linear-gradient(#f47590,red);
+    background-clip: text;
+    color:transparent;
+    margin:5px 0;
+}
+.poem>p{
+    text-indent: 2em;
+    width:520px;
+    line-height:25px; 
+}
+.poem>audio{
+    margin:20px 0 0 200px;
+}
