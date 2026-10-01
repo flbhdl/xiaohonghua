@@ -133,7 +133,7 @@ body {
 .poem {
   position: fixed;
   top: 25%;
-  right: 8%;
+  right: 0;
   color: #ccc;
   font-size: 16px;
 }
@@ -152,7 +152,7 @@ body {
 }
 .poem > p {
   text-indent: 2em;
-  width: 680px;
+  width: 550px;
   line-height: 50px;
   font-weight: bold;
 }
