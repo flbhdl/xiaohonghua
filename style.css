@@ -135,12 +135,12 @@ body {
   top: 25%;
   right: 8%;
   color: #ccc;
-  font-size: 20px;
+  font-size: 16px;
 }
 .poem > h3 {
   text-align: center;
   color: #c9284b;
-  font-size: 32px;
+  font-size: 24px;
 }
 .poem > h4 {
   background: linear-gradient(#ecf475, red);
@@ -148,7 +148,7 @@ body {
   color: transparent;
   text-align: right;
   margin: 5px 30px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .poem > p {
   text-indent: 2em;
